@@ -4,71 +4,36 @@ body {
   padding: 0;
   background-color: #f0f0f0;
 }
-.modal {
-  display: none;
-  position: fixed;
-  z-index: 1;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  overflow: auto;
-  background-color: rgba(0, 0, 0, 0.5);
-}
-
-.modal-content {
-  background-color: #fff;
-  margin: 15% auto;
-  padding: 20px;
-  border: 1px solid #888;
-  width: 50%;
-  text-align: center;
+.hero {
+  display: flex;
+  justify-content: center;
 }
 
 .container {
+  padding: 50px;
+}
+
+.research {
   display: flex;
-  align-items: center;
   justify-content: center;
-  min-height: 100vh;
+  margin: 0px;
 }
 
-.card {
-  background-color: white;
+.accordion {
   width: 80%;
-  max-width: 400px;
-  padding: 2rem;
-  border-radius: 12px;
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-  text-align: center;
 }
 
-.circle-image {
-  border-radius: 50%;
-  width: 150px;
-  height: 150px;
-  object-fit: cover;
-  margin-bottom: 1rem;
+.problem {
+  display: flex;
+  justify-content: center;
+}
+.problemdiv {
+  display: flex;
+  justify-content: center;
 }
 
-h1 {
-  font-size: 2rem;
-  margin-bottom: 0.5rem;
-}
-
-p {
-  font-size: 1rem;
-  color: #777;
-  margin-bottom: 1.5rem;
-}
-
-a {
-  text-decoration: none;
-  background-color: #007bff;
-  color: white;
-  padding: 0.75rem 1.5rem;
-  border-radius: 5px;
-}
-
-a:hover {
-  background-color: #0056b3;
+.carousel-image {
+  height: 500px; /* set the height you want */
+  object-fit: cover; /* this will make sure the aspect ratio of your images is preserved */
+  margin-bottom: 50px;
 }

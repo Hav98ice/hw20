@@ -19,19 +19,22 @@ function loadHTML(file, elementId) {
 document.addEventListener("DOMContentLoaded", () => {
   loadHTML("header.html", "header-placeholder");
   loadHTML("footer.html", "footer-placeholder");
+
+  // Added code to handle smooth scrolling
+  const links = document.querySelectorAll(".nav-link");
+
+  for (const link of links) {
+    link.addEventListener("click", clickHandler);
+  }
 });
 
-window.toggleMenu = function () {
-  const dropdownMenu = document.querySelector(".dropdown-menu");
-  dropdownMenu.style.display =
-    dropdownMenu.style.display === "block" ? "none" : "block";
-};
+function clickHandler(e) {
+  e.preventDefault();
+  const href = this.getAttribute("href");
+  const offsetTop = document.querySelector(href).offsetTop;
 
-function displayModal() {
-  const thankYouModal = document.getElementById("thankYouModal");
-  thankYouModal.style.display = "block";
-
-  setTimeout(() => {
-    thankYouModal.style.display = "none";
-  }, 3000);
+  scroll({
+    top: offsetTop,
+    behavior: "smooth",
+  });
 }
